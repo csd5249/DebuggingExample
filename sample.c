@@ -16,7 +16,7 @@ int func_a( int a, char *str ) {
 
 int func_b( int b ) {
     if ( b%54 == 33 ) {
-        b = -100000;
+        b = 100000;
     }
     return( b );
 }
@@ -29,12 +29,12 @@ int main( int argv, char **argc ) {
     for ( i=0; i<100; i++ ) {
         if ( i == 19 ) {
             printf( "Hello there!\n" );
-            //my_string = mstr;
+            my_string = mstr;
             func_a( 10, my_string ); // Bug two
         } else {
             b += func_b( i ); // Bug three
         }
-        i++;  // Bug one
+        //i++;  // Bug one not needed, increments twice
     }
 
     if ( b < 0 ) {
