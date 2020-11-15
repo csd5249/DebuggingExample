@@ -2,6 +2,8 @@
 #include <string.h>
 #define MYSTRING "0123456789"
 
+//poopy water
+
 int func_a( int a, char *str ) {
     memcpy( str, MYSTRING, a );
     if ( strncmp(str, MYSTRING, a) == 0 ) {
